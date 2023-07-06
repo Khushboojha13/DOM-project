@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #season{
+            display:block;
+            margin-inline: auto;
+            height:500px;
+            width:500px;
+            margin-top:auto;
+        }
+        #btn1{
+            display:block;
+            margin-inline: auto;
+            margin-top: 20px;
+            padding-inline: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+      <img src="erik-witsoe-mODxn7mOzms-unsplash.jpg" alt="" id="season">
+      <button id="btn1">Rainy Season</button>
+
+      <script>
+        let btn=document.getElementById('btn1') //this is to get element button
+        let season= document.getElementById('season') //this is to get element image
+        
+        btn.addEventListener('click',toggleseason)  //yaha jab button par click hoga to toggleseason function chalega 
+
+        function toggleseason(){
+             if(btn.textContent.includes('Rainy')){  //yaha agar button me text rainy contain kar raha hoga to below chize apply ho jayengi
+                
+                season.src="keagan-henman--ndLL94OKYA-unsplash.jpg"
+                btn.textContent="Dry Season"
+             }
+             else{
+                season.src="erik-witsoe-mODxn7mOzms-unsplash.jpg"
+                btn.textContent="Rainy Season"
+             }
+        }
+      </script>
+
+</body>
+</html>
